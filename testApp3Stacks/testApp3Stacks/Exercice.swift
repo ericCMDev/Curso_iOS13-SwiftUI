@@ -1,22 +1,22 @@
 //
-//  ContentView.swift
+//  Exercice.swift
 //  testApp3Stacks
 //
-//  Created by Eric Cabestany Mena on 16/2/22.
+//  Created by Eric Cabestany on 18/2/22.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct Exercice: View {
     var body: some View {
         VStack{
-            HeaderView()
+            HeaderView2()
             
-            HStack{
-                PricingView(title: "Básico", subtitle: "Un curso incluido", price: "9.99€", textColor: .white, backgroundColor: .green)
+            VStack{
+                PricingView2(title: "Básico", subtitle: "Un curso incluido", price: "9.99€", textColor: .white, backgroundColor: .green, icon: "brain")
                 
                 ZStack {
-                    PricingView(title: "Carrera", subtitle: "Toda una carrera", price: "29.99€", textColor: .black, backgroundColor: Color(red:230/255, green:230/255, blue:230/255))
+                    PricingView2(title: "Carrera", subtitle: "Toda una carrera", price: "29.99€", textColor: .black, backgroundColor: Color(red:230/255, green:230/255, blue:230/255), icon: "graduationcap")
                     
                     Text("El mejor para empezar")
                         .font(.system(.caption, design: .rounded))
@@ -25,16 +25,16 @@ struct ContentView: View {
                         .padding(8)
                         .background(Color(red:240/255, green:180/255, blue:50/255))
                         .cornerRadius(10)
-                        .offset(x:0,y:-75)
+                        .offset(x:0,y:-85)
                         
-                }
+                }.offset(x:0,y:-85)
                 
                 }.padding(.horizontal)
                  
             
             HStack{
                 ZStack {
-                    PricingView(title: "Definitivo", subtitle: "Todos los cursos online", price: "99.99€", textColor: .white, backgroundColor: .black, icon: "lightbulb").padding(.horizontal)
+                    PricingView2(title: "Definitivo", subtitle: "Todos los cursos online", price: "99.99€", textColor: .white, backgroundColor: .black, icon: "lightbulb").padding(.horizontal)
                     
                     Text("Conviértete en un máster del universo")
                         .font(.system(.caption, design: .rounded))
@@ -46,7 +46,7 @@ struct ContentView: View {
                         .offset(x:0,y:-83)
                         
                     
-                }
+                }.offset(x:0,y:-190)
             }.padding(.vertical)
             Spacer()
         }
@@ -55,13 +55,13 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Exercice_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Exercice()
     }
 }
 
-struct HeaderView: View {
+struct HeaderView2: View {
     var body: some View {
         
         HStack {
@@ -81,7 +81,7 @@ struct HeaderView: View {
     }
 }
 
-struct PricingView: View {
+struct PricingView2: View {
     
     var title: String
     var subtitle: String
@@ -98,7 +98,8 @@ struct PricingView: View {
             icon.map({
                 Image(systemName:$0) //$0 és la primera variable que troba, en aquest cas "icon"
                 .font(.title)
-                .foregroundColor(.white)
+                .foregroundColor(textColor)
+                
                 
             })
                 

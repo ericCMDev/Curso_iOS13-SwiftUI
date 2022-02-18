@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A4DD5B027C01CF900447F56 /* Exercice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DD5AF27C01CF900447F56 /* Exercice.swift */; };
 		5AB73B7827BD837D0021F8DD /* testApp3StacksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB73B7727BD837D0021F8DD /* testApp3StacksApp.swift */; };
 		5AB73B7A27BD837D0021F8DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB73B7927BD837D0021F8DD /* ContentView.swift */; };
 		5AB73B7C27BD83810021F8DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB73B7B27BD83810021F8DD /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A4DD5AF27C01CF900447F56 /* Exercice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercice.swift; sourceTree = "<group>"; };
 		5AB73B7427BD837D0021F8DD /* testApp3Stacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp3Stacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB73B7727BD837D0021F8DD /* testApp3StacksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testApp3StacksApp.swift; sourceTree = "<group>"; };
 		5AB73B7927BD837D0021F8DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				5AB73B7727BD837D0021F8DD /* testApp3StacksApp.swift */,
 				5AB73B7927BD837D0021F8DD /* ContentView.swift */,
+				5A4DD5AF27C01CF900447F56 /* Exercice.swift */,
 				5AB73B7B27BD83810021F8DD /* Assets.xcassets */,
 				5AB73B7D27BD83810021F8DD /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4DD5B027C01CF900447F56 /* Exercice.swift in Sources */,
 				5AB73B7A27BD837D0021F8DD /* ContentView.swift in Sources */,
 				5AB73B7827BD837D0021F8DD /* testApp3StacksApp.swift in Sources */,
 			);
