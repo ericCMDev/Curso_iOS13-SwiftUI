@@ -8,29 +8,35 @@
 import SwiftUI
 
 struct CardView: View {
+    
+    var imageName: String
+    var authorName: String
+    var courseTitle: String
+    var originalPrice: String
+    var discountPrice: String
     var body: some View {
         VStack {
-            Image("github")
+            Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 
             
             HStack {
                 VStack(alignment: .leading){
-                    Text("Eric Cabestany")
+                    Text(authorName)
                         .font(.headline)
                         .foregroundColor(.secondary)
-                    Text("Curso de Github de cero".uppercased())
+                    Text(courseTitle.uppercased())
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
                         .lineLimit(2)
                     HStack {
-                        Text("10.99€")
+                        Text(discountPrice)
                             .font(.subheadline)
                             .fontWeight(.bold)
                         .foregroundColor(.primary)
-                        Text("199.99€")
+                        Text(originalPrice)
                             .font(.caption)
                             .foregroundColor(.secondary)
                             .strikethrough()
@@ -51,6 +57,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView(imageName: "github", authorName: "Eric Cabestany", courseTitle: "Curso de github de cero", originalPrice: "199.99€", discountPrice: "10.99€")
     }
 }
