@@ -14,9 +14,11 @@ struct ContentView: View {
             path.addLine(to: CGPoint(x: 230, y: 30))
             path.addLine(to: CGPoint(x: 230, y: 150))
             path.addLine(to: CGPoint(x: 30, y: 150))
+            path.closeSubpath()
                 
         }
-        .fill(Color.blue)
+        //.fill(Color.blue)
+        .stroke(Color.green, lineWidth: 12)
         
     }
 }
