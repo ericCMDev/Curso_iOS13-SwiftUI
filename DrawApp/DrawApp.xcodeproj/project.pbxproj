@@ -12,6 +12,9 @@
 		5A1190D627F4D95C00D5A731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1190D527F4D95C00D5A731 /* Assets.xcassets */; };
 		5A1190D927F4D95C00D5A731 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1190D827F4D95C00D5A731 /* Preview Assets.xcassets */; };
 		5ABCB82527F62F1F00D780EF /* CurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCB82427F62F1F00D780EF /* CurveView.swift */; };
+		5AC503E927F841300029C1CC /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC503E827F841300029C1CC /* PieView.swift */; };
+		5AC503EB27F850D40029C1CC /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC503EA27F850D40029C1CC /* ProgressIndicator.swift */; };
+		5AC503ED27F8545C0029C1CC /* DonutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC503EC27F8545C0029C1CC /* DonutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		5A1190D527F4D95C00D5A731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A1190D827F4D95C00D5A731 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5ABCB82427F62F1F00D780EF /* CurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveView.swift; sourceTree = "<group>"; };
+		5AC503E827F841300029C1CC /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
+		5AC503EA27F850D40029C1CC /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		5AC503EC27F8545C0029C1CC /* DonutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 				5A1190D527F4D95C00D5A731 /* Assets.xcassets */,
 				5A1190D727F4D95C00D5A731 /* Preview Content */,
 				5ABCB82427F62F1F00D780EF /* CurveView.swift */,
+				5AC503E827F841300029C1CC /* PieView.swift */,
+				5AC503EA27F850D40029C1CC /* ProgressIndicator.swift */,
+				5AC503EC27F8545C0029C1CC /* DonutView.swift */,
 			);
 			path = DrawApp;
 			sourceTree = "<group>";
@@ -141,8 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ABCB82527F62F1F00D780EF /* CurveView.swift in Sources */,
+				5AC503E927F841300029C1CC /* PieView.swift in Sources */,
 				5A1190D427F4D95400D5A731 /* ContentView.swift in Sources */,
+				5AC503EB27F850D40029C1CC /* ProgressIndicator.swift in Sources */,
 				5A1190D227F4D95400D5A731 /* DrawAppApp.swift in Sources */,
+				5AC503ED27F8545C0029C1CC /* DonutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
