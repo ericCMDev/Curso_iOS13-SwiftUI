@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A05E27E27FB495900CBD585 /* LoadingBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A05E27D27FB495900CBD585 /* LoadingBarView.swift */; };
+		5A05E28027FB4DD500CBD585 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A05E27F27FB4DD500CBD585 /* ProgressView.swift */; };
+		5A05E28227FB51BE00CBD585 /* DotsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A05E28127FB51BE00CBD585 /* DotsLoadingView.swift */; };
 		5A951F4B27FA063B009FEEDF /* AnimsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A951F4A27FA063B009FEEDF /* AnimsAppApp.swift */; };
 		5A951F4D27FA063B009FEEDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A951F4C27FA063B009FEEDF /* ContentView.swift */; };
 		5A951F4F27FA0644009FEEDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A951F4E27FA0644009FEEDF /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A05E27D27FB495900CBD585 /* LoadingBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBarView.swift; sourceTree = "<group>"; };
+		5A05E27F27FB4DD500CBD585 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		5A05E28127FB51BE00CBD585 /* DotsLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsLoadingView.swift; sourceTree = "<group>"; };
 		5A951F4727FA063B009FEEDF /* AnimsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A951F4A27FA063B009FEEDF /* AnimsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimsAppApp.swift; sourceTree = "<group>"; };
 		5A951F4C27FA063B009FEEDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +64,9 @@
 				5A951F4E27FA0644009FEEDF /* Assets.xcassets */,
 				5A951F5027FA0644009FEEDF /* Preview Content */,
 				5A951F5827FA1542009FEEDF /* LoadingView.swift */,
+				5A05E27D27FB495900CBD585 /* LoadingBarView.swift */,
+				5A05E27F27FB4DD500CBD585 /* ProgressView.swift */,
+				5A05E28127FB51BE00CBD585 /* DotsLoadingView.swift */,
 			);
 			path = AnimsApp;
 			sourceTree = "<group>";
@@ -141,8 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A951F4D27FA063B009FEEDF /* ContentView.swift in Sources */,
+				5A05E27E27FB495900CBD585 /* LoadingBarView.swift in Sources */,
+				5A05E28027FB4DD500CBD585 /* ProgressView.swift in Sources */,
 				5A951F4B27FA063B009FEEDF /* AnimsAppApp.swift in Sources */,
 				5A951F5927FA1542009FEEDF /* LoadingView.swift in Sources */,
+				5A05E28227FB51BE00CBD585 /* DotsLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
