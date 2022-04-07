@@ -34,7 +34,8 @@ struct ContentView: View {
                         .foregroundColor(.white)
                     )
                     //.transition(AnyTransition.scale(scale: 0, anchor: .bottom).combined(with: .offset(x: -700, y: 0))) //posant el codi directament
-                    .transition(.offsetScaledOpacityOut) //fent servir una extensió de la classe AnyTransition
+                  //  .transition(.offsetScaledOpacityOut) //fent servir una extensió de la classe AnyTransition
+                    .transition(.asymmetric(insertion: .offset(x: -600, y: 0), removal: .scale(scale: 0, anchor: .bottom))) //Hauria de funcionar però no :D
                 
             }
             
