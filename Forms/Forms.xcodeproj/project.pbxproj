@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A249412286A181600947718 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A249411286A181600947718 /* SettingsView.swift */; };
 		5AE7D8C4286227720047B751 /* FormsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7D8C3286227720047B751 /* FormsApp.swift */; };
 		5AE7D8C6286227720047B751 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7D8C5286227720047B751 /* ContentView.swift */; };
 		5AE7D8C8286227750047B751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE7D8C7286227750047B751 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A249411286A181600947718 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5AE7D8C0286227720047B751 /* Forms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE7D8C3286227720047B751 /* FormsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsApp.swift; sourceTree = "<group>"; };
 		5AE7D8C5286227720047B751 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				5AE7D8C3286227720047B751 /* FormsApp.swift */,
 				5AE7D8C5286227720047B751 /* ContentView.swift */,
+				5A249411286A181600947718 /* SettingsView.swift */,
 				5AE7D8D1286228040047B751 /* DetailView.swift */,
 				5AE7D8C7286227750047B751 /* Assets.xcassets */,
 				5AE7D8C9286227750047B751 /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A249412286A181600947718 /* SettingsView.swift in Sources */,
 				5AE7D8D42862282F0047B751 /* Course.swift in Sources */,
 				5AE7D8C6286227720047B751 /* ContentView.swift in Sources */,
 				5AE7D8D2286228040047B751 /* DetailView.swift in Sources */,

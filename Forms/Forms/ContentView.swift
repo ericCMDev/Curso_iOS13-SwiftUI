@@ -18,7 +18,10 @@ struct ContentView: View {
         Course(name: "Curso 4", image: "uoc-logo", type: "Educación", priceLevel: 5)
     ]
     
-    @State var selectedCourse: Course?
+    @State private var selectedCourse: Course?
+    @State private var showActionSheet = false
+    @State private var showSettings = false
+    @State private var favoritedText = "Marcar como favorito"
     
     var body: some View {
         NavigationView {
@@ -58,6 +61,25 @@ struct ContentView: View {
                             }
                             .onTapGesture {
                                 self.selectedCourse = course
+                                self.showActionSheet.toggle()
+                            }.actionSheet(isPresented: $showActionSheet) {
+                                ActionSheet(title: Text("Indica tu acción a realizar"),
+                                            message: nil,
+                                            buttons: [.default(Text("Marcar como favorito"),
+                                                        action: {
+                                                            if let selectedCourse = self.selectedCourse {
+                                                            self.setFeatured(item: selectedCourse)
+                                                            }
+                                                    
+                                                        }),
+                                                      .destructive(Text("Eliminar curso"), action: {
+                                                          if let selectedCourse = self.selectedCourse {
+                                                              self.deleteCourse(item: selectedCourse)
+                                                          }
+                                                      }),
+                                                      .cancel()
+                                                    
+                                            ])
                             }
                       /*  NavigationLink(destination: DetailView(course: course)) {
                             EmptyView()
@@ -132,12 +154,14 @@ struct CourseRow: View {
             {
                 Image(systemName: "star.circle.fill")
                     .foregroundColor(.yellow)
+                
             }
             if(course.purchased)
             {
                 Image(systemName: "checkmark.circle.fill")
                     .foregroundColor(.green)
             }
+            
             
         }
     }
