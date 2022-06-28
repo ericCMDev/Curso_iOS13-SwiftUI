@@ -91,7 +91,19 @@ struct ContentView: View {
                 }
         }
         .navigationBarTitle("Cursos Online", displayMode: .automatic)
-    }
+        .navigationBarItems(trailing:
+            Button(action: {
+                self.showSettings.toggle()
+            }, label: {
+                Image(systemName: "gear")
+                    .font(.title)
+                    .tint(.gray)
+            })
+            )
+            .sheet(isPresented: $showSettings){
+                SettingsView()
+            }
+        }
         
 }
     
