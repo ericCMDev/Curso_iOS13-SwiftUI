@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
-    private var sortingMethod = ["Alfabéticamente", "Los favoritos primero", "Los comprados primero"]
-    @State private var selectedSortingMethod = 0
+    
+    @EnvironmentObject var settings: SettingsFactory
+    
+    @State private var selectedSortingMethod = SortingOrderType.alphabetical
     @State private var showPurchasedOnly = false
     @State private var coursePrice = 5{
         didSet{
@@ -21,15 +23,15 @@ struct SettingsView: View {
             }
         }
     }
-    
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Ordenar los cursos")) {
                     Picker(selection: $selectedSortingMethod, label: Text("Ordenación"))
                     {
-                        ForEach(0..<sortingMethod.count, id: \.self) {
-                            Text(self.sortingMethod[$0])
+                        ForEach(SortingOrderType.allCases, id: \.self) { orderType in
+                            Text(orderType.description)
                         }
          
                     }
@@ -50,12 +52,38 @@ struct SettingsView: View {
                 
             }
             .navigationBarTitle("Configuración")
+            .navigationBarItems(leading:
+                Button(action: {
+                    dismiss()
+                }, label: {
+                    Image(systemName: "chevron.down")
+                        .font(.title)
+                        
+                }),
+                trailing:
+                Button(action: {
+                    self.settings.order = self.selectedSortingMethod
+                    self.settings.showPurchased = self.showPurchasedOnly
+                    self.settings.price = self.coursePrice
+                    dismiss()
+                }, label: {
+                    Image(systemName: "square.and.arrow.down")
+                        .font(.title)
+                        
+                })
+                )
+            
+        }
+        .onAppear {
+            self.selectedSortingMethod = self.settings.order
+            self.showPurchasedOnly  = self.settings.showPurchased
+            self.coursePrice = self.settings.price
         }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView().environmentObject(SettingsFactory())
     }
 }

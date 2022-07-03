@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    
+    @EnvironmentObject var settings: SettingsFactory
     
     @State var courses = [
-        Course(name: "Curso 1", image: "maths", type: "Matemáticas", priceLevel: 4, featured: true),
-        Course(name: "Curso 2", image: "unity", type: "Games", priceLevel: 5, purchased: true),
-        Course(name: "Curso 3", image: "unreal", type: "Games", priceLevel: 3, featured: true, purchased: true),
-        Course(name: "Curso 4", image: "uoc-logo", type: "Educación", priceLevel: 5)
+        Course(name: "Curso de Matemáticas", image: "maths", type: "Matemáticas", priceLevel: 4, featured: true),
+        Course(name: "Curso de Unity", image: "unity", type: "Games", priceLevel: 5, purchased: true),
+        Course(name: "Curso de Juegos Unreal", image: "unreal", type: "Games", priceLevel: 3, featured: true, purchased: true),
+        Course(name: "Curso la UOC", image: "uoc-logo", type: "Educación", priceLevel: 5)
     ]
     
     @State private var selectedCourse: Course?
@@ -26,8 +26,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List{
-            ForEach(courses){ course  in
+                ForEach(courses
+                    .filter(shouldShowCourse)
+                    .sorted(by: self.settings.order.predicateSort())){ course  in
                     ZStack{
+                        
                         //separem l'element de la navigation link per amagar la fletxeta de cada element de la llista >
                         CourseRow(course: course)
                             .contextMenu {
@@ -101,7 +104,7 @@ struct ContentView: View {
             })
             )
             .sheet(isPresented: $showSettings){
-                SettingsView()
+                SettingsView().environmentObject(self.settings)
             }
         }
         
@@ -127,11 +130,21 @@ struct ContentView: View {
             self.courses.remove(at: idx)
         }
     }
+    
+    private func shouldShowCourse(course: Course) -> Bool {
+        let checkPurchased = (self.settings.showPurchased && course.purchased) || !self.settings.showPurchased
+        let checkPrice = (course.priceLevel <= self.settings.price)
+        return checkPurchased && checkPrice
+            
+        
+    }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(SettingsFactory())
     }
 }
 
